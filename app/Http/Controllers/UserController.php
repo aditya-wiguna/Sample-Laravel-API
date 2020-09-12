@@ -134,6 +134,8 @@ class UserController extends Controller
                 'is_active' => $request->is_active
             ]);
 
+            $data = User::find($id);
+
             return response()->json([
                 'success' => true,
                 'message' => 'Data Berhasil Update',
