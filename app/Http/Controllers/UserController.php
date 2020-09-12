@@ -15,17 +15,12 @@ class UserController extends Controller
      */
     public function index()
     {
-        // $data = User::orderBy('created_at', 'DESC')->get();
+        $data = User::orderBy('created_at', 'DESC')->get();
 
-        // return response()->json([
-        //     'success' => true,
-        //     'message' => 'Data Ditemukan',
-        //     'data' => $data
-        // ]);
         return response()->json([
-            'md5' => \md5('aditya'),
-            'base64' => \base64_encode('aditya'),
-            'sha' => \sha1('aditya')
+            'success' => true,
+            'message' => 'Data Ditemukan',
+            'data' => $data
         ]);
     }
 
